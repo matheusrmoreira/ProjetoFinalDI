@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seja Diva | Moda Feminina</title>
+  <link rel="icon" type="image/png" href="arquivos/Logo Seja Diva Favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="widget-acessibilidade" id="widget-acessibilidade">
+    <div class="painel-acessibilidade" id="painel-acessibilidade" role="region" aria-label="Controles de acessibilidade"
+      hidden>
+      <span class="painel-acess-titulo">Acessibilidade</span>
+
+      <div class="painel-acess-grupo">
+        <button type="button" id="btn-diminuir-fonte" aria-label="Diminuir tamanho da fonte"
+          title="Diminuir fonte">A-</button>
+        <button type="button" id="btn-resetar-fonte" aria-label="Tamanho padrão da fonte"
+          title="Fonte padrão">A</button>
+        <button type="button" id="btn-aumentar-fonte" aria-label="Aumentar tamanho da fonte"
+          title="Aumentar fonte">A+</button>
+      </div>
+
+      <button type="button" id="btn-tema" class="btn-tema-painel" aria-label="Alternar modo claro e escuro">
+        <span id="icone-tema">🌙</span>
+        <span id="texto-tema">Modo Escuro</span>
+      </button>
+    </div>
+
+    <button type="button" id="btn-abrir-acessibilidade" class="botao-acessibilidade-fixo" aria-expanded="false"
+      aria-controls="painel-acessibilidade" aria-label="Abrir opções de acessibilidade" title="Acessibilidade">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <circle cx="12" cy="4.5" r="2.2" />
+        <path
+          d="M19 8.5h-5.2c-.6 0-1.2 0-1.8 0s-1.2 0-1.8 0H5c-.6 0-1 .4-1 1s.4 1 1 1h4.5v10.5c0 .6.4 1 1 1s1-.4 1-1v-5h1v5c0 .6.4 1 1 1s1-.4 1-1V10.5H19c.6 0 1-.4 1-1s-.4-1-1-1z" />
+      </svg>
+    </button>
+  </div>
+
+  <a href="#inicio" class="marca-fixa" aria-label="Voltar ao início - Seja Diva">
+    <img src="arquivos/Logo Seja Diva 2.0.png" alt="Logo Seja Diva" class="marca-fixa-logo">
+    <div class="marca-fixa-texto">
+      <span class="marca-fixa-titulo">Seja Diva</span>
+      <span class="marca-fixa-tagline">MODA FEMININA</span>
+    </div>
+  </a>
+
+  <header class="cabecalho" id="inicio">
+    <div class="logo-conteiner">
+      <img src="arquivos/Logo Seja Diva 2.0.png" alt="Logo Seja Diva" class="logo-site">
+      <h1 class="titulo-loja">Seja Diva</h1>
+      <span class="tagline-loja">MODA FEMININA</span>
+    </div>
+
+    <p class="boas-vindas">
+      Moda Feminina em São Paulo — Peças Cheias de Personalidade para Realçar a sua Essência.
+    </p>
+    <a href="#pecas" class="botao-destaque">Ver Peças Disponíveis</a>
+
+    <div class="galeria-artes">
+      <div class="quadro-arte">
+        <img src="arquivos/trio vestidos Seja Diva.png" alt="Coleção Seja Diva">
+      </div>
+      <div class="quadro-arte">
+        <img src="arquivos/Vestido branco Seja Diva.png" alt="Elegância Seja Diva">
+      </div>
+      <div class="quadro-arte">
+        <img src="arquivos/Vestido bege - 2 Seja Diva.png" alt="Estilo Seja Diva">
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu" id="menu-navegacao">
+    <div class="menu-links">
+      <a href="#inicio" class="botao-menu">Início</a>
+      <a href="#pecas" class="botao-menu">Peças Atuais</a>
+      <a href="#videos" class="botao-menu">Vídeos</a>
+      <a href="#sobre" class="botao-menu">Nossa História</a>
+      <a href="#contato" class="botao-menu">Contato</a>
+    </div>
+    <button id="btn-toggle-menu" aria-label="Esconder menu">▲</button>
+  </nav>
+
+  <main class="painel">
+    <section class="cartao" id="pecas" aria-labelledby="titulo-pecas">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-pecas">Peças Disponíveis</h2>
+        <p class="subtitulo-secao">Seu look perfeito para a próxima ocasião especial está aqui. ✨</p>
+      </div>
+
+      <div class="filtros-pecas" role="group" aria-label="Filtrar peças por categoria">
+        <button type="button" class="btn-filtro ativo" data-categoria="todas">Todas</button>
+        <button type="button" class="btn-filtro" data-categoria="vestidos">Vestidos</button>
+        <button type="button" class="btn-filtro" data-categoria="conjuntos">Conjuntos</button>
+        <button type="button" class="btn-filtro" data-categoria="blusas">Blusas & Saias</button>
+      </div>
+
+      <div class="grade-pecas" id="grade-pecas">
+        <article class="card-peca" data-categoria="vestidos">
+          <div class="card-peca-img-box">
+            <span class="badge-peca">Peça Única</span>
+            <img src="arquivos/vestido vermelho.png"
+              alt="Vestido longo terracota com bordado floral branco, alças de amarração e saia em camadas"
+              loading="lazy">
+          </div>
+          <div class="card-peca-corpo">
+            <div class="card-peca-meta">
+              <span class="tag-tamanho">Bordado Floral</span>
+              <span class="tag-cor">Terracota</span>
+            </div>
+            <h3 class="card-peca-titulo">Vestido Longo Bordado</h3>
+            <p class="card-peca-desc">Alças de amarração nos ombros, busto estruturado e saia fluida em camadas com
+              barra trabalhada em laise.</p>
+            <div class="card-peca-rodape">
+              <span class="card-peca-preco">R$ 159,90</span>
+              <a href="https://wa.me/5561993733731?text=Ol%C3%A1!%20Tenho%20interesse%20na%20pe%C3%A7a:%20Vestido%20Longo%20Bordado%20(R$%20159,90)"
+                target="_blank" rel="noopener" class="btn-whatsapp-peca">
+                Tenho Interesse
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-peca" data-categoria="conjuntos">
+          <div class="card-peca-img-box">
+            <span class="badge-peca">Destaque</span>
+            <img src="arquivos/conjunto infantil.png"
+              alt="Conjunto de blusa rosa estampada e saia pregueada rosé de cintura alta com botões" loading="lazy">
+          </div>
+          <div class="card-peca-corpo">
+            <div class="card-peca-meta">
+              <span class="tag-tamanho">2 Peças • Cintura Alta</span>
+              <span class="tag-cor">Rosa & Rosé</span>
+            </div>
+            <h3 class="card-peca-titulo">Conjunto Saia Pregueada</h3>
+            <p class="card-peca-desc">Blusa leve de manga curta com estampa delicada combinada com saia rodada de pregas
+              e botões frontais.</p>
+            <div class="card-peca-rodape">
+              <span class="card-peca-preco">R$ 119,90</span>
+              <a href="https://wa.me/5561993733731?text=Ol%C3%A1!%20Tenho%20interesse%20na%20pe%C3%A7a:%20Conjunto%20Saia%20Pregueada%20(R$%20119,90)"
+                target="_blank" rel="noopener" class="btn-whatsapp-peca">
+                Tenho Interesse
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-peca" data-categoria="blusas">
+          <div class="card-peca-img-box">
+            <span class="badge-peca">Novidade</span>
+            <img src="arquivos/camisa rosa.png"
+              alt="Blusa bata rosa bebê em tecido laise bordado com decote V e mangas amplas" loading="lazy">
+          </div>
+          <div class="card-peca-corpo">
+            <div class="card-peca-meta">
+              <span class="tag-tamanho">Tecido Laise</span>
+              <span class="tag-cor">Rosa Bebê</span>
+            </div>
+            <h3 class="card-peca-titulo">Blusa Bata Bordada</h3>
+            <p class="card-peca-desc">Decote V com botões frontais, mangas amplas com acabamento vazado e caimento
+              soltinho super confortável.</p>
+            <div class="card-peca-rodape">
+              <span class="card-peca-preco">R$ 79,90</span>
+              <a href="https://wa.me/5561993733731?text=Ol%C3%A1!%20Tenho%20interesse%20na%20pe%C3%A7a:%20Blusa%20Bata%20Bordada%20(R$%2079,90)"
+                target="_blank" rel="noopener" class="btn-whatsapp-peca">
+                Tenho Interesse
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="videos" class="cartao">
+      <h2>Vídeos de Catálogo</h2>
+    </section>
+
+    <section class="cartao" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-sobre">Nossa História</h2>
+        <p class="subtitulo-secao">Muito mais do que moda: um sonho construído com amor, memória e carinho.</p>
+      </div>
+
+      <div class="sobre-fundadora">
+        <div class="foto-fundadora-moldura">
+          <img src="arquivos/fatima.png" alt="Foto de Fátima, fundadora da loja Seja Diva" loading="lazy">
+        </div>
+
+        <div class="historia-fundadora">
+          <span class="selo-fundadora">Quem faz a Seja Diva acontecer</span>
+          <h3>Olá, eu sou a Fátima!</h3>
+          <p>
+            Sou apaixonada por moda feminina e tenho o sonho de ver a <strong>Seja Diva</strong> crescer cada vez mais,
+            levando autoestima e alegria para cada mulher que passa por aqui.
+          </p>
+          <p>
+            O nome da loja nasceu de uma homenagem muito especial à minha mãe, que faleceu em 2026 e sempre foi a minha
+            maior inspiração. Cada detalhe deste espaço carrega a lembrança, o cuidado e o afeto que aprendi com ela.
+          </p>
+          <p>
+            Aqui você encontra muito carinho, atenção de verdade e vestidos lindos que cabem no seu bolso — porque, para
+            mim, <strong>a cliente vem sempre em primeiro lugar</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="grade-sobre-cards">
+        <article class="card-explicativo">
+          <span class="icone-card-sobre" aria-hidden="true">🤍</span>
+          <h3>Feito com Amor e Memória</h3>
+          <p>Uma homenagem viva em forma de cuidado, acolhimento e dedicação em cada peça escolhida para o catálogo.</p>
+        </article>
+
+        <article class="card-explicativo">
+          <span class="icone-card-sobre" aria-hidden="true">👗</span>
+          <h3>Beleza que Cabe no Bolso</h3>
+          <p>Vestidos e looks cheios de charme com preços justos, pensados para você se sentir maravilhosa sem pesar no
+            orçamento.</p>
+        </article>
+
+        <article class="card-explicativo">
+          <span class="icone-card-sobre" aria-hidden="true">🤝</span>
+          <h3>Cliente Sempre em 1º Lugar</h3>
+          <p>Atendimento próximo, sincero e atencioso pelo WhatsApp para ajudar você a encontrar a peça que mais combina
+            com você.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cartao" id="contato" aria-labelledby="titulo-contato">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-contato">Fale Conosco</h2>
+        <p class="subtitulo-secao">Quer reservar um vestido ou tirar alguma dúvida? Fale direto com a Fátima pelo
+          WhatsApp ou envie um recado abaixo.</p>
+      </div>
+
+      <div class="contato-layout">
+        <div class="contato-info">
+          <h3>Atendimento via WhatsApp</h3>
+          <p>Como cada peça do nosso catálogo é selecionada com muito carinho, o atendimento é feito diretamente pelo
+            WhatsApp para confirmar disponibilidade e combinar tudo com você.</p>
+
+          <ul class="lista-contato">
+            <li><strong>📍 Localização:</strong> São Paulo – SP</li>
+            <li><strong>💬 Canal Oficial:</strong> Atendimento exclusivo via WhatsApp</li>
+            <li><strong>👗 Catálogo:</strong> Moda Feminina com Amor</li>
+          </ul>
+
+          <a href="https://wa.me/5561993733731?text=Ol%C3%A1%20F%C3%A1tima!%20Vim%20pelo%20site%20da%20Seja%20Diva%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+            target="_blank" rel="noopener" class="btn-whatsapp-contato">
+            Chamar no WhatsApp
+          </a>
+        </div>
+
+        <form class="form-contato" id="form-contato" novalidate>
+          <div class="campo-grupo">
+            <label for="contato-nome">Seu Nome</label>
+            <input type="text" id="contato-nome" name="nome" placeholder="Ex: Maria Clara" required>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="contato-whatsapp">Seu WhatsApp</label>
+            <input type="tel" id="contato-whatsapp" name="contato" placeholder="Ex: (11) 99999-9999" required>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="contato-assunto">Assunto</label>
+            <select id="contato-assunto" name="assunto">
+              <option value="reserva">Reservar uma peça do catálogo</option>
+              <option value="duvida">Dúvida sobre tecido ou caimento</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="contato-mensagem">Mensagem</label>
+            <textarea id="contato-mensagem" name="mensagem" rows="4"
+              placeholder="Conte qual peça você gostou ou como podemos ajudar..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-enviar-form">Enviar Mensagem</button>
+          <p class="feedback-form" id="feedback-contato" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p class="direitos">&copy; 2026 Seja Diva • Moda Feminina • São Paulo - SP</p>
+    <a href="https://www.linkedin.com/in/mathrmoreira/" target="_blank" rel="noopener noreferrer" class="link-autor">
+      <span>Site feito por</span>
+      <img src="arquivos/Logo Meu Site (sem fundo).png" alt="Meu Logo" class="logo-rodape">
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
